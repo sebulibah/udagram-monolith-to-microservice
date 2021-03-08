@@ -1,2 +1,4 @@
 */node-modules
 set_env.sh
+cors_bucket_policy
+s3_policy
