@@ -10,9 +10,9 @@ env:
     - NAME=udagram-api-user 
       DOCKER_BUILD=sebulibah/udagram-api-user 
       DOCKERFILE=udagram-api-user
-    - NAME=udagram-api-frontend
-      DOCKER_BUILD=sebulibah/udagram-api-frontend
-      DOCKERFILE=udagram-api-frontend
+    - NAME=udagram-frontend
+      DOCKER_BUILD=sebulibah/udagram-frontend
+      DOCKERFILE=udagram-frontend
     - NAME=udagram-reverse-proxy
       DOCKER_BUILD=sebulibah/udagram-reverse-proxy
       DOCKERFILE=udagram-reverse-proxy
