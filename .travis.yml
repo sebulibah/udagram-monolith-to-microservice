@@ -6,16 +6,16 @@ env:
   matrix:
     - NAME=udagram-api-feed
       DOCKER_BUILD=sebulibah/udagram-api-feed
-      DOCKERFILE=udagram-api-feed/
+      DOCKERFILE=udagram-api-feed
     - NAME=udagram-api-user 
       DOCKER_BUILD=sebulibah/udagram-api-user 
-      DOCKERFILE=udagram-api-user/
+      DOCKERFILE=udagram-api-user
     - NAME=udagram-api-frontend
       DOCKER_BUILD=sebulibah/udagram-api-frontend
-      DOCKERFILE=udagram-api-frontend/
+      DOCKERFILE=udagram-api-frontend
     - NAME=udagram-reverse-proxy
       DOCKER_BUILD=sebulibah/udagram-reverse-proxy
-      DOCKERFILE=udagram-reverse-proxy/
+      DOCKERFILE=udagram-reverse-proxy
 
 services:
   - docker
@@ -30,7 +30,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -f {DOCKERFILE} -t {DOCKER_BUILD} .
+  - docker build -t {DOCKER_BUILD} -f {DOCKERFILE}/Dockerfile .
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
