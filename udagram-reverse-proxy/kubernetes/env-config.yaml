@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+data:
+  POSTGRES_HOST: udagram-microservice.clcefsx8ateo.us-east-2.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  AWS_BUCKET: udagram-997720287978-microservice
+  AWS_REGION: us-east-2b
+  AWS_PROFILE: default
+  URL: http://localhost:8100
