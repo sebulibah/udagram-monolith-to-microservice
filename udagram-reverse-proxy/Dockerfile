@@ -1,3 +1,3 @@
 FROM nginx:alpine
 
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY udagram-reverse-proxy/nginx.conf /etc/nginx/nginx.conf
