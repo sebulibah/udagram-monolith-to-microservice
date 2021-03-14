@@ -5,13 +5,13 @@ WORKDIR /usr/src/app
 
 # Install app dependencies by copying
 # package.json and package-lock.json
-COPY package*.json ./
+COPY udagram-api-feed/package*.json /usr/src/app/
 
 # Install dependencies
 RUN npm install
 
 # Copy app source
-COPY . .
+COPY udagram-api-feed /usr/src/app
 
 # Bind the port that the image will run on
 EXPOSE 8080
