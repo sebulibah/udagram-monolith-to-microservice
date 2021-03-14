@@ -34,7 +34,7 @@ spec:
         - name: JWT_SECRET
           valueFrom:
             secretKeyRef:
-              name: env-config
+              name: env-secret
               key: JWT_SECRET
         - name: POSTGRES_DB
           valueFrom:
@@ -57,5 +57,3 @@ spec:
               name: env-secret
               key: POSTGRES_USERNAME
       restartPolicy: Always
-
-
